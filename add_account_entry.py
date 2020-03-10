@@ -82,11 +82,15 @@ new_record = models.execute_kw(
 )
 # devuelve el id interno del nuevo asiento (5 en mi caso).
 # el asiento queda en estado borrador.
+# ver imagen en img/ref2.png
 
 # este proximo, publica el asiento
 models.execute_kw(db, uid, password, 'account.move', 'post', [new_record], res=True)
 # este xmlrpc call, devuelve un None, y no está permitido por el servicio xmlrpc en Odoo. Hay un issue no resuelto
 # de parte de odoo. Nosotros hemos hecho un commit que salva esta posibilidad cuando la localización para chile
 # está instalada.
+# el issue que se menciona es el siguiente: https://github.com/odoo/odoo/issues/29768
+# ver imagen en img/ref3.png
+
 
 

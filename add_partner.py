@@ -152,4 +152,6 @@ partner_data = {
 
 id = models.execute_kw(db, uid, password, 'res.partner', 'create', [partner_data])
 # crea el partner y devuelve el ID asignado
+# ver formato de las llamadas en img/ref1.png
+
 
